@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UTA Housing</string>
+    <string name="login_title">Login</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_housing_home">HousingHome</string>
+
+    <string name="home_menu1">Apply To Housing</string>
+    <string name="home_menu2">View Apartments/Residence Halls</string>
+    <string name="home_menu3">Check Application Status</string>
+    <string name="home_menu4">Logout</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="oncampusText">Living on campus is a great way for you to get connected, meet friends, and be involved. To that end, University Housing offers a wide array of housing options designed to meet your needs and provides an environment that supports academic growth and community respect by offering opportunities for leadership, involvement, and connections for residents that live it up on campus.</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_housing_application_home">HousingApplicationHome</string>
+
+    <string name="hello_world">Housing Application!</string>
+</resources>

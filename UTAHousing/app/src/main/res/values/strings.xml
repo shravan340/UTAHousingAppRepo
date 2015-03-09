@@ -21,4 +21,7 @@
         <item>Check Application Status</item>
         <item>Logout</item>
     </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Housing Application</string>
 </resources>

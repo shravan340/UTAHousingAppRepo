@@ -2,25 +2,18 @@ package utahousing.seproject.com.utahousing;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
 
 public class HousingHome extends ActionBarActivity
@@ -56,12 +49,30 @@ public class HousingHome extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-//        // update the main content by replacing fragments
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
 
+        Fragment fragment=null;
+        switch(position){
+            case 0:
+                fragment=new HousingApplicationHomeFragment();
+                break;
+            case 1:
+                fragment=new ViewApartmentFragment();
+                break;
+            case 2:
+                fragment=new ApplicationStatusFragment();
+                break;
+            case 3:
+                Intent logoutIntent=new Intent(this,HousingLogin.class);
+                startActivity(logoutIntent);
+                break;
+        }
+//        // update the main content by replacing fragments
+        if(fragment!=null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, fragment)
+                    .commit();
+        }
     }
 
     public void onSectionAttached(int number) {

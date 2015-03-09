@@ -21,7 +21,7 @@
             android:label="@string/title_activity_housing_home" >
         </activity>
         <activity
-            android:name=".HousingApplicationHome"
+            android:name=".HousingApplicationHomeFragment"
             android:label="@string/title_activity_housing_application_home"
             android:parentActivityName=".HousingHome" >
             <meta-data

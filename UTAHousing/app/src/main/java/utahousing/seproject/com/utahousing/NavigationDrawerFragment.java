@@ -240,9 +240,6 @@ public class NavigationDrawerFragment extends Fragment {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-
-
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -257,7 +254,7 @@ public class NavigationDrawerFragment extends Fragment {
         actionBar.setTitle(R.string.app_name);
     }
 
-    private ActionBar getActionBar() {
+    public ActionBar getActionBar() {
         return ((ActionBarActivity) getActivity()).getSupportActionBar();
     }
 

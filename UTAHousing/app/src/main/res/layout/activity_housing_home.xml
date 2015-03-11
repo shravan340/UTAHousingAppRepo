@@ -16,6 +16,17 @@
             android:layout_gravity="center_horizontal|top"
             android:adjustViewBounds="true"
             android:src="@drawable/homebanner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/oncampusText"
+            android:id="@+id/tv_onCampusText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="146dp"
+            android:layout_gravity="center_horizontal|bottom" />
     </FrameLayout>
 
     <!-- android:layout_gravity="start" tells DrawerLayout to treat

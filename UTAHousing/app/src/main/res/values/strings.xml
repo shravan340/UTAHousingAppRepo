@@ -19,7 +19,6 @@
     </string>
     <string name="title_activity_housing_application_home">HousingApplicationHome</string>
 
-    <string name="hello_world">Housing Application!</string>
     <string-array name="naveDrawerItems">
         <item>Apply To Housing</item>
         <item>View Apartments/Residence Halls</item>
@@ -27,6 +26,13 @@
         <item>Logout</item>
     </string-array>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Housing Application</string>
+    <string-array name="apartmentsList">
+        <item>Select an Apartment</item>
+        <item>Meadow Run</item>
+        <item>Timberbrook</item>
+        <item>Cooper Chase</item>
+        <item>Arlington Hall</item>
+        <item>Trinity House</item>
+    </string-array>
+
 </resources>

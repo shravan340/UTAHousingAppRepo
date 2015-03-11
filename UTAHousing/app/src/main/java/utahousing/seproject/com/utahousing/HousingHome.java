@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 
 public class HousingHome extends ActionBarActivity
@@ -69,6 +70,7 @@ public class HousingHome extends ActionBarActivity
         }
 //        // update the main content by replacing fragments
         if(fragment!=null) {
+            ((TextView)findViewById(R.id.tv_onCampusText)).setText("");
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.container, fragment)

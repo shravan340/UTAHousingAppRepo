@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import utahousing.seproject.database.DBAdapter;
+import utahousing.seproject.database.DBHelper;
 
 
 public class HousingLogin extends ActionBarActivity {
@@ -40,7 +45,16 @@ public class HousingLogin extends ActionBarActivity {
     }
 
     public void OnLoginClick(View view){
-        Intent intent=new Intent(this,HousingHome.class);
-        startActivity(intent);
+        EditText tb_myMavUserId=(EditText) findViewById(R.id.tb_username);
+        EditText tb_password=(EditText) findViewById(R.id.tb_password);
+        DBAdapter dbAdapter=new DBAdapter(this);
+        if(dbAdapter.isLoginSuccessful(tb_myMavUserId.getText().toString(),tb_password.getText().toString())) {
+            Toast.makeText(this,"Login Successful",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, HousingHome.class);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(this,"Invalid Username/Password. Please try again",Toast.LENGTH_SHORT).show();
+        }
     }
 }
